@@ -1,28 +1,4 @@
-type CityType ={
-	title: string
-	houses: Array<HousesType>
-	governmentBuildings:Array<GoverType>
-	citizensNumber: number
-}
-type HousesType={
-	buildedAt: number
-	repaired: boolean
-	address: AddrType
-}
-type AddrType ={
-	number?: number
-	street: StreetType
-}
-type  StreetType={
-	title: string
-}
-
-type GoverType ={
-	type: string
-	budget: number
-	staffCount: number
-	address: Array<AddrType>
-}
+import {CityType} from './02_02'
 
 let city: CityType;
 
@@ -36,11 +12,10 @@ beforeEach(() => {
 ],
 
 		governmentBuildings: [
-			{type: "HOSPITAL", budget: 200000, staffCount: 200,
-				address:{street:{title: "Central Str" } } },
+			{type: "HOSPITAL", budget: 200000, staffCount: 200, address: {} },
 
-			{type: "FIRE-STATION", budget: 500000, staffCount: 1000,
-				address:{street: {title: "South Str" } }},
+			// {type: "FIRE-STATION", budget: 500000, staffCount: 1000,
+			// 	address:{number: 10, street: {title: "South Str" } }},
 
 		],
 		citizensNumber: 1000000
