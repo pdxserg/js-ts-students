@@ -1,12 +1,15 @@
 import {student, StudentType} from "../02-hello-tests/02";
 
 
-export const addSkill =(student:StudentType, skill: string) =>{
-return (
-	student.tehnologies.push({
+export const addSkill =(st:StudentType, skill: string) =>{
+
+	st.tehnologies.push({
 		id: new Date().getTime(),
 		title: skill
 
 	})
-)
+
 	}
+export const makeStudentInaktiv= (s:StudentType) =>{
+	s.isActive= false
+}
