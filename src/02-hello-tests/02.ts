@@ -9,9 +9,9 @@
 }
 type AddressType = {
 	street: string
-	city: CityTipe
+	city: CityType
 }
-type CityTipe ={
+type CityType ={
 	contry:string
 	cityTitle: string
 }

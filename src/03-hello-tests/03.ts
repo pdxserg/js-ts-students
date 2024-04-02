@@ -13,3 +13,8 @@ export const addSkill =(st:StudentType, skill: string) =>{
 export const makeStudentInaktiv= (s:StudentType) =>{
 	s.isActive= false
 }
+
+export  const doesStudentLiveInCity = (s: StudentType, cityName: string) => {
+	return s.address.city.cityTitle === cityName
+}
+
