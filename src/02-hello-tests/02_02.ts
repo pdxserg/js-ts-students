@@ -4,23 +4,23 @@ export type CityType ={
 	governmentBuildings:Array<GoverType>
 	citizensNumber: number
 }
-type HousesType={
+export type HousesType={
 	buildedAt: number
 	repaired: boolean
-	address: AddrType
+	address: AddressType
 }
-export type AddrType ={
+export type AddressType ={
 	number?: number
 	street: StreetType
 }
-type  StreetType={
+export type  StreetType={
 	title: string
 }
 
-type GoverType ={
+export type GoverType ={
 	type: "HOSPITAL" | "FIRE-STATION"
 	budget: number
 	staffCount: number
-	address: Array<AddrType>
+	address: AddressType
 }
 

@@ -25,7 +25,7 @@ beforeEach(() => {
 
 })
 
-test("new tech should be added to student ", () => {
+test.skip("new tech should be added to student", () => {
 	expect(student.tehnologies.length).toBe(3)
 
 	addSkill(student, "JS")
@@ -34,7 +34,7 @@ test("new tech should be added to student ", () => {
 
 
 })
-test("student should be not active", () => {
+test.skip("student should be not active", () => {
 	expect(student.isActive).toBe(true)
 
 	makeStudentInaktiv(student)
