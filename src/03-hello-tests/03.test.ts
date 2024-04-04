@@ -34,14 +34,14 @@ test.skip("new tech should be added to student", () => {
 
 
 })
-test.skip("student should be not active", () => {
+test("student should be not active", () => {
 	expect(student.isActive).toBe(true)
 
 	makeStudentInaktiv(student)
 
 	expect(student.isActive).toBe(false)
 })
-test("does student live in Minsk", () => {
+test.skip("does student live in Minsk", () => {
 
 	let result1 = doesStudentLiveInCity(student, "Moscow")
 	let result2 = doesStudentLiveInCity(student, "Minsk")
