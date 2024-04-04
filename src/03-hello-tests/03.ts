@@ -1,5 +1,5 @@
 import {StudentType} from "../02-hello-tests/02";
-import {CityType, GoverType} from "../02-hello-tests/02_02";
+import {GoverType} from "../02-hello-tests/02_02";
 
 
 export const addSkill =(st:StudentType, skill: string) =>{
