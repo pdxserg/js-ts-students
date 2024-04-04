@@ -1,5 +1,5 @@
 import {StudentType} from "../02-hello-tests/02";
-import { GoverType} from "../02-hello-tests/02_02";
+import {CityType, GoverType} from "../02-hello-tests/02_02";
 
 
 export const addSkill =(st:StudentType, skill: string) =>{
@@ -20,6 +20,10 @@ export  const doesStudentLiveInCity = (s: StudentType, cityName: string) => {
 }
 
 export const addMoneyToBudget= (g: GoverType, budget: number) =>{
-	return g.budget += budget;
+	return g.budget+= budget;
 
 }
+ // export  const addMoneyToBudget2= (goverType: GoverType, number: number)=> {
+	//  return goverType.budget += number
+ //
+ // }
