@@ -1,5 +1,6 @@
+import {GoverType} from "../02-hello-tests/02_02";
 
-type ManType = {
+export type ManType = {
 	name: string
 	age: number
 }
@@ -35,3 +36,10 @@ let devs3 = people.map(man =>
 		lastName: man.name.split(" ")[1]
 	})
 )
+
+
+export let helloStudent = people.map((man) => {
+	return{
+		firstName: `${man.name.split(" ")[0]} welkom!`
+	}
+})
