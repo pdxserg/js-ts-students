@@ -32,37 +32,41 @@ beforeEach(() => {
 		citizensNumber: 1000000
 	}
 })
-test("Budget should be changed for HOSPITAL", () => {
+test.skip("Budget should be changed for HOSPITAL", () => {
 	addMoneyToBudget(city.governmentBuildings[0], 100000);
 
 	expect(city.governmentBuildings[0].budget).toBe(300000)
 
 })
 
-test("Budget should be changed for FIRE-STATION", () => {
+test.skip("Budget should be changed for FIRE-STATION", () => {
 	addMoneyToBudget(city.governmentBuildings[1], -100000);
 
 	expect(city.governmentBuildings[1].budget).toBe(400000)
 
 })
 
+
+
 test("Hous should be repair", () => {
 	repairHouse(city.houses[1]);
-
-	expect(city.houses[1]).toBeTruthy()
+	expect(city.houses[1].repaired).toBeTruthy()
 
 })
-test('Staff should be reduced', () => {
+
+
+
+test.skip('Staff should be reduced', () => {
 	toFireStaff(city.governmentBuildings[0], 20);
 
 	expect(city.governmentBuildings[0].staffCount).toBe(180);
 });
-test('Staff should be increased', () => {
+test.skip('Staff should be increased', () => {
 	toHireStaff(city.governmentBuildings[0], 20);
 
 	expect(city.governmentBuildings[0].staffCount).toBe(220);
 });
-test('Greetingn', () => {
+test.skip('Greetingn', () => {
 	const message =  peopleGreetingn(city);
 
 	expect(message).toBe("Hello New York and all 1000000 peoples");

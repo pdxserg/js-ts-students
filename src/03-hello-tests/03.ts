@@ -24,10 +24,21 @@ export const addMoneyToBudget= (g: GoverType, budget: number) =>{
 
 }
 
+
+
+
+
 // !!!!!!!!doesnt work properly
  export const repairHouse = (housesType1: HousesType) => {
-	housesType1.repaired = true
+	 housesType1.repaired = true
  }
+
+
+
+
+
+
+
 
 export const toFireStaff = (g: GoverType, number: number) => {
 g.staffCount -= number
