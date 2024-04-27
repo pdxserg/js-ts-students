@@ -38,8 +38,10 @@ let devs3 = people.map(man =>
 )
 
 
-export let helloStudent = people.map((man) => {
-	return{
-		firstName: `${man.name.split(" ")[0]} welkom!`
-	}
-})
+export let helloStudent = people.map((man) =>
+		`${man.name.split(" ")[0]} welkom!`
+)
+export const gretingPeople = (p:Array<ManType>)=>{
+	return people.map(man => `${man.name.split(" ")[0]} welkom!`
+		)
+}

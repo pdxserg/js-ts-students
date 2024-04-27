@@ -1,4 +1,4 @@
-import {helloStudent, ManType} from "./05_01";
+import {gretingPeople, helloStudent, ManType} from "./05_01";
 
 
 
@@ -13,7 +13,7 @@ beforeEach(()=>{
 })
 test("greeting students", ()=>{
 
-
-	expect(helloStudent.length).toBe(3)
-	expect(helloStudent[2].firstName).toBe("Dmitry welkom!")
+const mess = gretingPeople(people)
+	expect(mess.length).toBe(3)
+	expect(mess[2]).toBe("Dmitry welkom!")
 })
