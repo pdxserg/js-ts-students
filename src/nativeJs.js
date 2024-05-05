@@ -351,6 +351,63 @@
 //     return acc
 // },{}))
 
+// const users1 = [
+//     {
+//         id: "1",
+//         name: 'Bob', //["Bob"]
+//         isStudent: true,
+//     },
+//     {
+//         id: "2",
+//         name: 'Alex', //["Bob", "Alex"]
+//         isStudent: true,
+//     },
+//     {
+//         id: "3",
+//         name: 'Ann', // //["Bob", "Alex", "Anna"]
+//         isStudent: true,
+//     },
+//     {
+//         id: "4",
+//         name: 'Donaldd', // // //["Bob", "Alex", "Anna", "Donald"]
+//         isStudent: false,
+//     },
+// ];
+
+
+//✅.reduce
+
+// const userrr=[]
+// for (let i=0; i < users1.length; i++){
+//     userrr[users1[i].id] = users1[i]
+// }
+// console.log(userrr)
+
+
+// const b= users1.reduce((acc, el)=>{
+//     acc[el.id]=el
+//
+//     return acc
+// },{})
+// console.log(b)
+// console.log(b[2])
+
+// const a= [1,2,3,4,5]
+// const b = a.reduce((acc,e)=>acc +e, 0)
+// console.log(b)
+
+
+// let x = users1.reduce((acc,el)=>{
+//     if(el.id!=='2'){
+//         acc.push(el)
+//     }
+//     return acc
+// },[])
+// console.log(x)
+
+
+//✅forEach() - to the associativeArray
+
 const users1 = [
     {
         id: "1",
@@ -374,33 +431,28 @@ const users1 = [
     },
 ];
 
-
-//✅.reduce
-
-// const userrr=[]
-// for (let i=0; i < users1.length; i++){
-//     userrr[users1[i].id] = users1[i]
+//
+// function assArr (users){
+//     const newArray={}
+//     users.forEach(u=> newArray[u.id]=u)
+//     return newArray
 // }
-// console.log(userrr)
-
-
-const b= users1.reduce((acc, el)=>{
-    acc[el.id]=el
-
-    return acc
-},{})
-console.log(b)
-console.log(b[2])
-
-// const a= [1,2,3,4,5]
-// const b = a.reduce((acc,e)=>acc +e, 0)
-// console.log(b)
-
-
-let x = users1.reduce((acc,el)=>{
-    if(el.id!=='2'){
-        acc.push(el)
-    }
-    return acc
-},[])
-console.log(x)
+//
+// console.log(assArr(users1))
+//
+//
+//
+//
+//
+// const associativeArray = {};
+// users1.forEach(item => {
+//     associativeArray[item.id] = item;
+// });
+//
+// console.log(associativeArray['4'])
+// // ------>{
+// //     '1': { id: '1', name: 'Bob', isStudent: true },
+// //     '2': { id: '2', name: 'Alex', isStudent: true },
+// //     '3': { id: '3', name: 'Ann', isStudent: true },
+// //     '4': { id: '4', name: 'Donaldd', isStudent: false }
+// //        }
