@@ -107,7 +107,7 @@ test('ComponyT',()=>{
 	expect(user.address).not.toBe(copyUser.address)
 	expect(user.laptop).toBe(copyUser.laptop)
 	expect(user.companies).not.toBe(copyUser.companies)
-	expect(copyUser.companies.length).toBe(2)
-	expect(copyUser.companies[1]).toBe('react')
+	expect(copyUser.companies.length).toBe(3)
+	expect(copyUser.companies[2].name).toBe('HH')
 
 })

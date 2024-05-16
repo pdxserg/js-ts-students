@@ -31,6 +31,8 @@ export const removeJs=(us:UserBookType,book:string)=>{
 		books:us.books.filter(b=> b !==book )  }
 }
 
-export const ComponyT=(us:UserBookType,comp:string)=>{
-	return{...us, address:{...us.address}}
+export const ComponyT=(us:UserBookType& ComponyType,comp:string)=>{
+	const newComp= {id:1, name:comp}
+	return{...us, address:{...us.address},
+		companies: [{...us.companies[0]},{...us.companies[1]},newComp]}
 }
