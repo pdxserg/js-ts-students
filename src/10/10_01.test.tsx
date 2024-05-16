@@ -1,4 +1,4 @@
-import {addNew, addNew2, moveUser, UserBookType, Userlaptop, UserType} from "./10_01";
+import {addNew, addNew2, ComponyT, ComponyType, moveUser, removeJs, UserBookType, Userlaptop, UserType} from "./10_01";
 import {Simulate} from "react-dom/test-utils";
 import copy = Simulate.copy;
 
@@ -69,5 +69,45 @@ test('update book2',()=>{
 	expect(user.books).not.toBe(copyUser.books)
 	expect(copyUser.books.length).toBe(3)
 	expect(copyUser.books[1]).toBe('ts')
+
+})
+test('remove js',()=>{
+	let user: UserBookType={
+		name: 'bob',
+		hair:32,
+		address:{title:'Minsk'},
+		laptop:{title:'Asus'},
+		books:['css','js','react']
+	}
+	const copyUser=removeJs(user,  "js")
+
+	expect(user).not.toBe(copyUser)
+	expect(user.address).not.toBe(copyUser.address)
+	expect(user.laptop).toBe(copyUser.laptop)
+	expect(user.books).not.toBe(copyUser.books)
+	expect(copyUser.books.length).toBe(2)
+	expect(copyUser.books[1]).toBe('react')
+
+})
+test('ComponyT',()=>{
+	let user: UserBookType & ComponyType={
+		name: 'bob',
+		hair:32,
+		address:{title:'Minsk'},
+		laptop:{title:'Asus'},
+		books:['css','js','react'],
+		companies:[
+			{id:1, name: 'Amazon'},
+			{id:2, name: 'Googl'},
+		]
+	}
+	const copyUser=ComponyT(user,  "HH")
+
+	expect(user).not.toBe(copyUser)
+	expect(user.address).not.toBe(copyUser.address)
+	expect(user.laptop).toBe(copyUser.laptop)
+	expect(user.companies).not.toBe(copyUser.companies)
+	expect(copyUser.companies.length).toBe(2)
+	expect(copyUser.companies[1]).toBe('react')
 
 })

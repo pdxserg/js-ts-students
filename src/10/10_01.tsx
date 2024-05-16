@@ -11,6 +11,9 @@ export type Userlaptop = UserType &{
 export type UserBookType=UserType&Userlaptop& {
 	books:Array<string>
 }
+export type ComponyType={
+	companies:Array<{id:number, name: string}>
+}
 export function moveUser(user:Userlaptop, city:string){
 	return {...user,  address:{...user.address, title:city}}
 }
@@ -22,4 +25,12 @@ export const addNew=(us:UserBookType,book:string, )=>{
 export const addNew2=(us:UserBookType,book:string,change:string)=>{
 	return{...us, address:{...us.address},
 		books: us.books.map((b)=> b===change ? b=book : b) }
+}
+export const removeJs=(us:UserBookType,book:string)=>{
+	return{...us, address:{...us.address},
+		books:us.books.filter(b=> b !==book )  }
+}
+
+export const ComponyT=(us:UserBookType,comp:string)=>{
+	return{...us, address:{...us.address}}
 }
