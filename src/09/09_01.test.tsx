@@ -32,3 +32,34 @@ test("Increase Age", () => {
 	// expect(user.age).toBe(1000)
 
 })
+
+test("Increase Age", () => {
+
+
+	const user = {
+		name: 'Bob',
+		age: 29
+
+	}
+
+
+	increaseAge(user)
+
+	expect(user.age).toBe(30)
+
+	const superman = user
+	superman.age = 1000
+	expect(user.age).toBe(1000)
+
+})
+test("Increase Age", () => {
+
+	const user ={name: 'Bob', age: 29}
+	const user2 = {name: 'Job', age: 22}
+
+const users =[user, user2, {name: 'Bob', age: 29}]
+
+
+	expect(users.length).toBe(3)
+
+})

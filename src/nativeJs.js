@@ -216,7 +216,7 @@
 //✅filter() - метод массива, возвращает новый массив эдементов согласно переданному условию в коллбеке
 
 // const words = ['abs', 'testvariable', 'test', 'purple', 'plants', 'beer', 'Poland'];
-
+//
 // const res = words.filter((el) => el.length >= 6);
 // console.log('res: ', res);//  [ 'testvariable', 'purple', 'plants', 'Poland' ]
 
@@ -408,28 +408,28 @@
 
 //✅forEach() - to the associativeArray
 
-const users1 = [
-    {
-        id: "1",
-        name: 'Bob', //["Bob"]
-        isStudent: true,
-    },
-    {
-        id: "2",
-        name: 'Alex', //["Bob", "Alex"]
-        isStudent: true,
-    },
-    {
-        id: "3",
-        name: 'Ann', // //["Bob", "Alex", "Anna"]
-        isStudent: true,
-    },
-    {
-        id: "4",
-        name: 'Donaldd', // // //["Bob", "Alex", "Anna", "Donald"]
-        isStudent: false,
-    },
-];
+// const users1 = [
+//     {
+//         id: "1",
+//         name: 'Bob', //["Bob"]
+//         isStudent: true,
+//     },
+//     {
+//         id: "2",
+//         name: 'Alex', //["Bob", "Alex"]
+//         isStudent: true,
+//     },
+//     {
+//         id: "3",
+//         name: 'Ann', // //["Bob", "Alex", "Anna"]
+//         isStudent: true,
+//     },
+//     {
+//         id: "4",
+//         name: 'Donaldd', // // //["Bob", "Alex", "Anna", "Donald"]
+//         isStudent: false,
+//     },
+// ];
 
 //
 // function assArr (users){
@@ -456,3 +456,27 @@ const users1 = [
 // //     '3': { id: '3', name: 'Ann', isStudent: true },
 // //     '4': { id: '4', name: 'Donaldd', isStudent: false }
 // //        }
+// function generator(a) {
+//    let  x=1*a
+//     return "1*a=x"
+// }
+//
+// console.log(generator(2))
+
+
+
+function neutralise(s1, s2) {
+    // Here be dragons!
+
+    let a=[]
+    let b="0"
+    for(let i = 0; i < s1.length; i++){
+        if(s1[i] !== s2[i]){
+          return  a.push(b)
+        }return a.join
+
+    }
+}
+
+console.log(neutralise("--","++"))
+console.log(a)
