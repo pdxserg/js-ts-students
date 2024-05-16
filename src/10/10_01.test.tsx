@@ -98,16 +98,16 @@ test('ComponyT',()=>{
 		books:['css','js','react'],
 		companies:[
 			{id:1, name: 'Amazon'},
-			{id:2, name: 'Googl'},
+			{id:2, name: 'Goobl'},
 		]
 	}
-	const copyUser=ComponyT(user,  "HH")
+	const copyUser=ComponyT(user, 2 ,"Googl")
 
 	expect(user).not.toBe(copyUser)
 	expect(user.address).not.toBe(copyUser.address)
 	expect(user.laptop).toBe(copyUser.laptop)
 	expect(user.companies).not.toBe(copyUser.companies)
-	expect(copyUser.companies.length).toBe(3)
-	expect(copyUser.companies[2].name).toBe('HH')
+	expect(copyUser.companies.length).toBe(2)
+	expect(copyUser.companies[1].name).toBe('Googl')
 
 })
