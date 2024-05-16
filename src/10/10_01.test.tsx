@@ -20,7 +20,7 @@ test('some test',()=>{
 	expect(user.hair).toBe(32)
 	expect(newUser.hair).toBe(16)
 })
-test('some test',()=>{
+test('some test1',()=>{
 	let user: Userlaptop={
 		name: 'bob',
 		hair:32,

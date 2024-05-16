@@ -10,6 +10,5 @@ export type Userlaptop = UserType &{
 }
 
 export function moveUser(user:Userlaptop, city:string){
-	const copy={...user,  address:{...user.address, title:city}}
-	return copy
+	return {...user,  address:{...user.address, title:city}}
 }
