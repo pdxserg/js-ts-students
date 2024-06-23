@@ -1,8 +1,8 @@
 const promisefetch= ((url)=>{
     return new Promise((res, rej)=>{
-        return setTimeout(()=>{
-            res: "resolve"
-            // rej: "reject"
+        setTimeout(()=>{
+            res ("resolve")
+            // rej ("reject")
         },200)
     })
 })
