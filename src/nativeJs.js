@@ -215,10 +215,13 @@
 
 //✅filter() - метод массива, возвращает новый массив эдементов согласно переданному условию в коллбеке
 
-// const words = ['abs', 'testvariable', 'test', 'purple', 'plants', 'beer', 'Poland'];
+ //const words = ['Abs', 'testvariable', 'test', 'purple', 'planats', 'beer', 'Poland'];
 //
 // const res = words.filter((el) => el.length >= 6);
 // console.log('res: ', res);//  [ 'testvariable', 'purple', 'plants', 'Poland' ]
+
+// const eee = words.filter(u=> u.toLowerCase().indexOf("a")>-1)
+//  console.log(eee )  //[ 'Abs', 'testvariable', 'planats', 'Poland' ]
 
 // ✅sort() - метод для сортировки, сортирует на месте (мутабельный)
 
@@ -392,9 +395,9 @@
 // console.log(b)
 // console.log(b[2])
 
-// const a= [1,2,3,4,5]
-// const b = a.reduce((acc,e)=>acc +e, 0)
-// console.log(b)
+const a= [1,2,3,4,5]
+const b = a.reduce((acc,e)=>acc +e, 0)
+console.log(b)
 
 
 // let x = users1.reduce((acc,el)=>{
@@ -465,18 +468,18 @@
 
 
 
-function neutralise(s1, s2) {
-    // Here be dragons!
-
-    let a=[]
-    let b="0"
-    for(let i = 0; i < s1.length; i++){
-        if(s1[i] !== s2[i]){
-          return  a.push(b)
-        }return a.join
-
-    }
-}
-
-console.log(neutralise("--","++"))
-console.log(a)
+// function neutralise(s1, s2) {
+//     // Here be dragons!
+//
+//     let a=[]
+//     let b="0"
+//     for(let i = 0; i < s1.length; i++){
+//         if(s1[i] !== s2[i]){
+//           return  a.push(b)
+//         }return a.join
+//
+//     }
+// }
+//
+// console.log(neutralise("--","++"))
+// console.log(a)
