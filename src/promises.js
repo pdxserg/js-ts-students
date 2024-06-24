@@ -42,14 +42,30 @@
 
 
 //------------------------------
-function foo (){
 
-    function sss(){
-        console.log("sss")
+// const global ={
+//     enviremetRegister1:{counterCreater   },
+//     outer:{}
+// }
+function counterCreater (){
+
+    //     enviremetRegister2:{count: 0, void function  },
+    //     outer:{enviremetRegister1}
+    let  count = 0
+    return ()=>{
+
+        //     enviremetRegister3:{count: 0, void function  },
+        //     outer:{enviremetRegister2}
+        console.log(++count)
     }
 
-    sss()
-    console.log("foo")
 }
-foo()
+ const count1 = counterCreater()
+ const count2 = counterCreater()
 
+count1()
+count1()
+count1()
+count2()
+count2()
+count2()
