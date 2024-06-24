@@ -22,20 +22,34 @@
 // promise.finally(()=>{
 //     console.log("Finally")
 // })
+//---------------------
+// console.log("start")
+// setTimeout(() => {
+//     console.log("begin")
+// }, 1000)
+//
+// const delay = (() => {
+//     return new Promise((res, rej) => {
+//         res()
+//         console.log("Promise")
+//     })
+// })
+// delay(2000).then(() => {
+//     console.log("Hello")
+// })
+//
+// console.log("end")
 
-console.log("start")
-setTimeout(() => {
-    console.log("begin")
-}, 1000)
 
-const delay = ((ms) => {
-    return new Promise((res, rej) => {
-        res()
-    })
-})
-delay(2000).then(() => {
-    console.log("Hello")
-})
+//------------------------------
+function foo (){
 
-console.log("end")
+    function sss(){
+        console.log("sss")
+    }
+
+    sss()
+    console.log("foo")
+}
+foo()
 
