@@ -44,21 +44,21 @@
 //------------------------------
 
 // const global ={
-//     enviremetRegister1:{counterCreater   },
-//     outer:{}
+//     envirementRegister1:{counterCreater:function   },
+//     outer:{null}
 // }
+
 function counterCreater (){
-
-    //     enviremetRegister2:{count: 0, void function  },
+    //     envirementRegister2:{count: 0, void function  },
     //     outer:{enviremetRegister1}
-    let  count = 0
-    return ()=>{
 
-        //     enviremetRegister3:{count: 0, void function  },
+
+    return ()=> {
+        //     envirementRegister3:{  },
         //     outer:{enviremetRegister2}
-        console.log(++count)
+        let count = 0
+        console.log( ++count)
     }
-
 }
  const count1 = counterCreater()
  const count2 = counterCreater()
@@ -69,3 +69,5 @@ count1()
 count2()
 count2()
 count2()
+console.log(count1 === count2)
+console.log(count1 === counterCreater())
