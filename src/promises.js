@@ -24,16 +24,18 @@
 // })
 
 console.log("start")
+setTimeout(() => {
+    console.log("begin")
+}, 1000)
 
-const delay = ((ms)=>{
-    return new Promise((res,rej)=>{
-        setTimeout(()=>{
-            res()
-        },ms)
+const delay = ((ms) => {
+    return new Promise((res, rej) => {
+        res()
     })
 })
-delay(2000).then(()=>{
-    console.log("Hello")})
+delay(2000).then(() => {
+    console.log("Hello")
+})
 
 console.log("end")
 
