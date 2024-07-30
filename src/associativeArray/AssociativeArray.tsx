@@ -7,7 +7,7 @@ export type UsersType={
 export function toAssociativeArray(users:[]) {
 	const associativeArray = {};
 	users.forEach((user) => {
-		associativeArray[user.id] = user;
+		// associativeArray[user.id] = user;
 	});
 	return associativeArray;
 }

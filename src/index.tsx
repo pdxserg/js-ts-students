@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {User} from "./05/06-callbacks";
+import RadioDropdownApp from "./JS/RadioButton";
 
 
 
@@ -14,7 +15,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <User />
+    <RadioDropdownApp />
   </React.StrictMode>
 );
 
