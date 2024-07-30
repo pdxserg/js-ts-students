@@ -4,70 +4,54 @@ import React, {ChangeEvent, useState} from 'react';
 function RadioDropdown() {
 	const [selectedOption, setSelectedOption] = useState('1');
 
-	const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+	const handleSelectChange = (e:ChangeEvent<HTMLSelectElement>) => {
+		setSelectedOption(e.target.value);
+	};
+
+	const handleRadioChange = (e:ChangeEvent<HTMLInputElement>) => {
 		setSelectedOption(e.target.value);
 	};
 
 	return (
 		<div>
+			<select value={selectedOption} onChange={handleSelectChange}>
+				<option value="1">Dropdown 1</option>
+				<option value="2">Dropdown 2</option>
+				<option value="3">Dropdown 3</option>
+			</select>
+
 			<div>
-				<Label>
+				<label>
 					<input
 						type="radio"
 						value="1"
 						name="dropdown"
-						// checked={selectedOption === '1'}
-						onChange={handleChange}
+						checked={selectedOption === '1'}
+						onChange={handleRadioChange}
 					/>
 					Dropdown 1
-				</Label>
-				<Label>
-
-
+				</label>
+				<label>
 					<input
 						type="radio"
 						value="2"
 						name="dropdown"
-						// checked={selectedOption === '2'}
-						onChange={handleChange}
+						checked={selectedOption === '2'}
+						onChange={handleRadioChange}
 					/>
-
-
 					Dropdown 2
-				</Label>
-				<Label>
+				</label>
+				<label>
 					<input
 						type="radio"
 						value="3"
 						name="dropdown"
-						// checked={selectedOption === '3'}
-						onChange={handleChange}
+						checked={selectedOption === '3'}
+						onChange={handleRadioChange}
 					/>
 					Dropdown 3
-				</Label>
+				</label>
 			</div>
-
-			{selectedOption === '1' && (
-				<select>
-					<option value="3">Option 1-1</option>
-					<option value="2">Option 1-2</option>
-					<option value="1">Option 1-3</option>
-				</select>
-			)}
-			{selectedOption === '2' && (
-				<select>
-					<option value="1">Option 2-1</option>
-					<option value="2">Option 2-2</option>
-					<option value="3">Option 2-3</option>
-				</select>
-			)}
-			{selectedOption === '3' && (
-				<select>
-					<option value="1">Option 3-1</option>
-					<option value="2">Option 3-2</option>
-					<option value="3">Option 3-3</option>
-				</select>
-			)}
 		</div>
 	);
 }
