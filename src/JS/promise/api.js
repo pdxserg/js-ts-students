@@ -7,7 +7,11 @@ export const  api ={
        return axios.post("https://it-kamasutra.com/students-need")
     } ,
     getGoogle(){
-        return axios.get("https://google.com")
+         axios.get("https://google.com")
+             .then(res =>{
+                 return res.data.vacancies
+             })
+
     },
     getItMicrosoft(){
        return axios.get("https://microsoft.com")

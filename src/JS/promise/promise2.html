@@ -1,10 +1,37 @@
 <meta charset="UTF-8">
-<script src="axios.js"></script>
+
 <script src="api.js"></script>
 
 <script>
-    api.sendStudentsCountToItKamasutra(20)
-        .then(res => {
-            console.log(res);
-        });
+    api.getGoogle()
+        .then(res=>{
+            console.log(res)
+            return res.data
+        })
+
+
+
 </script>
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Axios Example</title>-->
+<!--    <script type="module">-->
+<!--        import { api } from './api.js';-->
+
+<!--        api.getGoogle()-->
+<!--            .then(res => {-->
+<!--                console.log(res)-->
+<!--                return res.data-->
+<!--            })-->
+<!--            .catch(error => {-->
+<!--                console.error('Error:', error);-->
+<!--            });-->
+<!--    </script>-->
+<!--</head>-->
+<!--<body>-->
+<!--<p>dddd</p>-->
+<!--</body>-->
+<!--</html>-->
