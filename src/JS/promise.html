@@ -1,11 +1,23 @@
 
 <script>
-    const setTime = (sec) => {
-        setTimeout(() => {
-            console.log("va ")
-        }, sec * 1000)
+    function doAfter(sec){
+        const myPromise= new Promise((res, rej)=>{
+            setTimeout(() => {
+                console.log("va ")
+                 res(sec)
+            }, sec * 1000)
+        })
+         return myPromise
     }
-    setTime(2)
+
+
+
+    doAfter(4).then((res)=>{console.log("I will call after "
+          +res+" sec")})
+    doAfter(1).then((res)=>{console.log("I will call after "
+          +res+" sec")})
+    doAfter(6).then((res)=>{console.log("I will call after "
+          +res+" sec")})
 
 
 </script>
