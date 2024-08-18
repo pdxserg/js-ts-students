@@ -257,25 +257,16 @@
 // const res = numbers.sort((a, b) => b - a);
 // console.log('res', res); //по убыванию [90, 87, 56, 4,  2,  1, -1000]
 
-// const users = [
-//   {
-//     id: 1,
-//     name: 'Bob',
-//     isStudent: true,
-//   },
-//   {
-//     id: 2,
-//     name: 'Alex',
-//     isStudent: true,
-//   },
-//   {
-//     id: 3,
-//     name: 'alex',
-//     isStudent: true,
-//   },
-// ];
+const users = [
+    { _id: 0, name: 'Кот', age: 3 },
+    { _id: 1, name: 'Александр', age: 66 },
+    { _id: 2, name: 'Коля', age: 16 },
+    { _id: 3, name: 'Виктор', age: 44 },
+    { _id: 4, name: 'Дмитрий', age: 40 },
+    { _id: 5, name: 'Ирина', age: 55 },
+]
 
-// console.log(users.sort((a, b) => b.name.localeCompare(a.name)));
+console.log(users.sort((a, b) => a.name.localeCompare(b.name)));
 
 //✅toSorted()
 
@@ -395,9 +386,9 @@
 // console.log(b)
 // console.log(b[2])
 
-const a= [1,2,3,4,5]
-const b = a.reduce((acc,e)=>acc +e, 0)
-console.log(b)
+// const a= [1,2,3,4,5]
+// const b = a.reduce((acc,e)=>acc +e, 0)
+// console.log(b)
 
 
 // let x = users1.reduce((acc,el)=>{
@@ -483,3 +474,4 @@ console.log(b)
 //
 // console.log(neutralise("--","++"))
 // console.log(a)
+
