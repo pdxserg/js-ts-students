@@ -1,4 +1,4 @@
-
+<meta charset="UTF-8">
 <script>
     function doAfter(sec){
         const myPromise= new Promise((res, rej)=>{
@@ -12,12 +12,19 @@
 
 
 
-    doAfter(4).then((res)=>{console.log("I will call after "
-          +res+" sec")})
-    doAfter(1).then((res)=>{console.log("I will call after "
-          +res+" sec")})
-    doAfter(6).then((res)=>{console.log("I will call after "
-          +res+" sec")})
+    // doAfter(4).then((res)=>{console.log("I will call after "
+    //       +res+" sec")})
+    // doAfter(1).then((res)=>{console.log("I will call after "
+    //       +res+" sec")})
+    // doAfter(6).then((res)=>{console.log("I will call after "
+    //       +res+" sec")})
+
+
+    let promise3 = doAfter(3);
+    promise3.then( () => console.log('я сработал через 3 секунд') );
+    promise3.then( () => console.log('и я тоже следом сработал через 3 секунд') );
+    promise3.then( () => console.log('и я') );
+
 
 
 </script>
