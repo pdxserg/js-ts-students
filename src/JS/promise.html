@@ -1,34 +1,20 @@
 <meta charset="UTF-8">
 <script>
-    function doAfter(sec){
-        const myPromise= new Promise((res, rej)=>{
-            setTimeout(() => {
-                console.log("va ")
-                 res(sec)
-            }, sec * 1000)
+    let pr = new Promise( (resolve) => {
+        let data = {
+            cities: [{title: "Minsk"}, {title: "Kiev"}],
+            website: "it-kamasutra.com"
+        };
+        resolve(data);
+    });
+
+    pr.then( data => {
+        console.log(data);
+        return data
+    })
+        .then( data => {
+            console.log(data.website);
         })
-         return myPromise
-    }
-
-
-
-    // doAfter(4).then((res)=>{console.log("I will call after "
-    //       +res+" sec")})
-    // doAfter(1).then((res)=>{console.log("I will call after "
-    //       +res+" sec")})
-    // doAfter(6).then((res)=>{console.log("I will call after "
-    //       +res+" sec")})
-
-
-    let promise3 = doAfter(3);
-    promise3.then( () => console.log('я сработал через 3 секунд') );
-    promise3.then( () => console.log('и я тоже следом сработал через 3 секунд') );
-
-   setTimeout(()=>{
-       console.log("settimout")
-       promise3.then( () => console.log('и я') );
-   },1000)
-
 
 
 
