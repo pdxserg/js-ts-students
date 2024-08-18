@@ -1,21 +1,10 @@
 <meta charset="UTF-8">
+<script src="axios.js"></script>
+<script src="api.js"></script>
+
 <script>
-    let pr = new Promise( (resolve) => {
-        let data = {
-            cities: [{title: "Minsk"}, {title: "Kiev"}],
-            website: "it-kamasutra.com"
-        };
-        resolve(data);
-    });
-
-    pr.then( data => {
-        console.log(data);
-        return data
-    })
-        .then( data => {
-            console.log(data.website);
-        })
-
-
-
+    api.sendStudentsCountToItKamasutra(20)
+        .then(res => {
+            console.log(res);
+        });
 </script>
