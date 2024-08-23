@@ -187,6 +187,11 @@
 // });
 
 // console.log('sum:', sum); //15
+//✅Math.max(2,3,4,100) -> // 100
+//✅Math.min(2,3,4,100) -> // 2
+//  let arr = [1,2,3,4,5]
+//✅Math.min(...arr) -> // 1
+
 
 //✅find() - метод массива возвращает первый элемент согласно переданному условию, если эл-та нет - undefined
 
@@ -256,17 +261,17 @@
 
 // const res = numbers.sort((a, b) => b - a);
 // console.log('res', res); //по убыванию [90, 87, 56, 4,  2,  1, -1000]
-
-const users = [
-    { _id: 0, name: 'Кот', age: 3 },
-    { _id: 1, name: 'Александр', age: 66 },
-    { _id: 2, name: 'Коля', age: 16 },
-    { _id: 3, name: 'Виктор', age: 44 },
-    { _id: 4, name: 'Дмитрий', age: 40 },
-    { _id: 5, name: 'Ирина', age: 55 },
-]
-
-console.log(users.sort((a, b) => a.name.localeCompare(b.name)));
+//
+// const users = [
+//     { _id: 0, name: 'Кот', age: 3 },
+//     { _id: 1, name: 'Александр', age: 66 },
+//     { _id: 2, name: 'Коля', age: 16 },
+//     { _id: 3, name: 'Виктор', age: 44 },
+//     { _id: 4, name: 'Дмитрий', age: 40 },
+//     { _id: 5, name: 'Ирина', age: 55 },
+// ]
+//
+// console.log(users.sort((a, b) => a.name.localeCompare(b.name)));
 
 //✅toSorted()
 
@@ -474,4 +479,3 @@ console.log(users.sort((a, b) => a.name.localeCompare(b.name)));
 //
 // console.log(neutralise("--","++"))
 // console.log(a)
-
