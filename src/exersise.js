@@ -34,11 +34,22 @@
 // console.log(a)
 
 
+// const   fruits =["apple", "ddd", "apple", "banan", "orange" , "banan"]
+// let appleCount =0
+// for (let i = 0; i<fruits.length; i++){
+//     if (fruits[i]=== 'apple'){
+//         appleCount++
+//    }
+// }
+// console.log(appleCount)
+
 const   fruits =["apple", "ddd", "apple", "banan", "orange" , "banan"]
-let appleCount =0
+let fruitsCount =[]
 for (let i = 0; i<fruits.length; i++){
-    if (fruits[i]=== 'apple'){
-        appleCount++
-   }
+    if (!fruitsCount[fruits[i]]){
+        fruitsCount[fruits[i]]= 1
+   }else{
+        fruitsCount[fruits[i]]++
+    }
 }
-console.log(appleCount)
+console.log(fruitsCount)

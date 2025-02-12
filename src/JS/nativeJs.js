@@ -156,21 +156,21 @@
 // const arr1 = [1, 2, 4];
 // const arr2 = [5, 6, 7];
 
-// const nestedArray = [
-//   [8, 9, 10],
-//   [11, 12, [13, 15, 17]],
-// ];
+const nestedArray = [
+  [8, 9, 10],
+  [11, 12, [13, 15, 17]],
+];
 
 // const res = arr1.concat(arr2, nestedArray);
-
+//
 // console.log('res', res); // [ 1, 2, 4, 5, 6, 7, [ 8, 9, 10 ], [ 11, 12 ] ]
 
-// //✅flat() - если пустой то раскрывает 1 уровень вложенности
+//✅flat() - если пустой то раскрывает 1 уровень вложенности
 
-// const resEmptyFlat = res.flat();
+const resEmptyFlat = nestedArray.flat();
 // const resInfinity = res.flat(Infinity);
 
-// console.log('resEmptyFlat: ', resEmptyFlat);
+console.log('resEmptyFlat: ', resEmptyFlat);
 // console.log('resInfinity: ', resInfinity);
 
 //✅forEach() -
